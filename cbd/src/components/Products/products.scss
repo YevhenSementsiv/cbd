@@ -1,0 +1,14 @@
+@import '../../styles/variables';
+
+.products {
+  background-color: #F7F8F3;
+  text-align: center;
+
+  &__title {
+    text-transform: uppercase;
+    color: $darkgrey;
+    font-size: 30px;
+    letter-spacing: 6px;
+    margin-bottom: 80px;
+  }
+}

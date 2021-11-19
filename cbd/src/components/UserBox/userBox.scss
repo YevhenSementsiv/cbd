@@ -1,0 +1,63 @@
+@import '../../styles/variables';
+@import "../../styles/mixins";
+
+.userbox {
+  max-width: 400px;
+  width: 100%;
+
+  @include respond-to('tablet') {
+    max-width: 350px;
+  }
+
+  @include respond-to('mobile') {
+    display: none;
+  }
+
+  &__list {
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__list-item {
+    border-left: 1px solid #BBC2D0;
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+    text-align: center;
+
+    @include respond-to('tablet') {
+      padding: 0 20px;
+    }
+  
+    @include respond-to('mobile') {
+      padding: 0 15px;
+    }
+  }
+
+  &__link {
+    text-transform: uppercase;
+    color: $white;
+    font-weight: 400;
+    font-size: 16px;
+
+    &:hover {
+      color: #ff0000;
+      transition: color ease 0.2s;
+    }
+  }
+
+  &__icon-holder {
+    font-size: 22px;
+    margin-right: 10px;
+
+    @include respond-to('tablet') {
+      font-size: 20px;
+      margin-right: 5px;
+    }
+  
+    @include respond-to('mobile') {
+      font-size: 16px;
+    }
+  }
+}

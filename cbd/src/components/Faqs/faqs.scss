@@ -1,0 +1,15 @@
+@import '../../styles/variables';
+
+.faqs {
+  background-color: #F7F8F3;
+  text-align: center;
+  padding: 140px 0;
+
+  &__title {
+    text-transform: uppercase;
+    color: $darkgrey;
+    font-size: 30px;
+    letter-spacing: 6px;
+    margin-bottom: 50px;
+  }
+}

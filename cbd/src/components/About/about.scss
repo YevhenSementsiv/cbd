@@ -1,0 +1,209 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.about {
+  background-color: #F7F8F3;
+  padding: 100px 15px;
+
+  @include respond-to('mobile') {
+    padding: 70px 15px;
+  }
+
+  &__title-holder {
+    background-image: url("../../images/about/titleBorder.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    max-width: 700px;
+    width: 100%;
+    margin: 0 auto 120px;
+    padding: 40px 0 35px 0;
+    text-align: center;
+
+    @include respond-to('mobile') {
+      max-width: 325px;
+      padding: 15px 0 10px 0;
+      margin: 0 auto 70px;
+    }
+  }
+
+  &__title {
+    text-transform: uppercase;
+    color: $darkgrey;
+    font-weight: 400;
+    font-size: 24px;
+    letter-spacing: 4.8px;
+    margin-bottom: 30px;
+
+    @include respond-to('mobile') {
+      font-size: 20px;
+      letter-spacing: 2px;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__logos-holder {
+    max-width: 505px;
+    width: 100%;
+    margin: 0 auto;
+
+    @include respond-to('mobile') {
+      max-width: 150px;
+    }
+  }
+}
+
+.tabs {
+  max-width: 1270px;
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 100px;
+
+  @include respond-to('laptop') {
+    padding-left: 70px;
+  }
+
+  @include respond-to('tablet') {
+    padding-left: 20px;
+  }
+
+  @include respond-to('mobile') {
+    padding-left: 10px;
+  }
+
+  &__list {
+    max-width: 970px;
+    width: 100%;
+    margin-bottom: 80px;
+    padding: 0 130px 0 0;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid $lightolive;
+  }
+
+  &__link {
+    display: block;
+    height: 100%;
+    padding-bottom: 20px;
+    color: $darkgrey;
+    font-weight: 400;
+    font-size: 30px;
+    letter-spacing: 6px;
+
+    &.active {
+      border-bottom: 2px solid $darkgrey;
+    }
+
+    @include respond-to('tablet') {
+      font-size: 26px;
+      letter-spacing: 4px;
+    }
+  
+    @include respond-to('mobile') {
+      font-size: 16px;
+      letter-spacing: 1px;
+    }
+  }
+
+  &__content-item {
+    display: none;
+    justify-content: space-between;
+
+    &.active {
+      display: flex;
+    }
+  }
+
+  &__column {
+    display: flex;
+    flex-direction: column;
+
+    &_left {
+      max-width: 400px;
+      width: 100%;
+      padding-top: 45px;
+      
+      @include respond-to('tablet') {
+        max-width: 300px;
+        padding-top: 30px;
+      }
+    
+      @include respond-to('mobile') {
+        max-width: 200px;
+        padding-top: 25px;
+      }
+    }
+
+    &_right {
+      justify-content: space-between;
+
+      @include respond-to('laptop') {
+        max-width: 500px;
+        width: 100%;
+      }
+
+      @include respond-to('tablet') {
+        max-width: 400px;
+        width: 100%;
+      }
+    
+      @include respond-to('mobile') {
+        max-width: 200px;
+        width: 100%;
+      }
+    }
+  }
+
+  &__title {
+    color: $darkgrey;
+    font-weight: 400;
+    font-size: 24px;
+    letter-spacing: 4.8px;
+    line-height: 165%;
+    margin-bottom: 50px;
+
+    @include respond-to('tablet') {
+      font-size: 22px;
+      letter-spacing: 4px;
+      margin-bottom: 30px;
+    }
+  
+    @include respond-to('mobile') {
+      font-size: 16px;
+      letter-spacing: 3px;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__text-holder {
+    color: #6e774a;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 220%;
+
+    @include respond-to('tablet') {
+      font-size: 16px;
+    }
+  
+    @include respond-to('mobile') {
+      font-size: 14px;
+    }
+  }
+
+  &__paragraph:nth-child(even) {
+    padding: 60px 0;
+
+    @include respond-to('tablet') {
+      padding: 30px 0;
+    }
+  
+    @include respond-to('mobile') {
+      padding: 20px 0;
+    }
+  }
+
+  &__img-holder {
+    &_top {
+      margin-bottom: 30px;
+    }
+  }
+}

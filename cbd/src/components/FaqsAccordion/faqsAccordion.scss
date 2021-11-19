@@ -1,0 +1,63 @@
+@import "../../styles/variables";
+
+.accordion {
+  max-width: 570px;
+  width: 100%;
+  margin: 0 auto;
+  border-top: 2px solid $lightolive;
+  border-bottom: 2px solid $lightolive;
+  background-color: #F7F8F3;
+
+  &__button {
+    color: $olive;
+    cursor: pointer;
+    width: 100%;
+    padding: 25px 25px 25px 0;
+    text-align: left;
+
+    &:hover {
+      background-color: #ddd;
+    }
+  }
+
+  &__panel {
+    padding: 40px;
+    animation: fadein 0.35s ease-in;
+  }
+
+  &__icon-holder {
+    font-size: 25px;
+    margin-right: 25px;
+  }
+
+  &__btn-text {
+    font-weight: 300;
+    font-size: 18px;
+    letter-spacing: 5px;
+  }
+
+  &__text-holder {
+    color: $darkgrey;
+    font-weight: 300;
+    font-size: 18px;
+    letter-spacing: 0.7px;
+    line-height: 220%;
+  }
+}
+
+.accordion__item + .accordion__item {
+  border-top: 2px solid $lightolive;
+}
+
+[hidden] {
+  display: none;
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

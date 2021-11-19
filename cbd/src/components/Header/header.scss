@@ -1,0 +1,29 @@
+@import '../../styles/variables';
+@import "../../styles/mixins";
+
+.header {
+  position: absolute;
+  z-index: 10;
+  width: 100%;
+  background-color: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #BBC2D0;
+  color: $white;
+  padding-left: 35px;
+
+  @include respond-to('tablet') {
+    padding-left: 15px;
+  }
+
+  @include respond-to('mobile') {
+    padding-left: 10px;
+  }
+
+  &__logo-link {
+    color: $white;
+    font-weight: 400;
+    font-size: 30px;
+  }
+}

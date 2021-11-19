@@ -1,0 +1,24 @@
+@import '../../styles/variables';
+
+.testimonials {
+  position: relative;
+  background-image: url("../../images/testimonials/testimonialsBg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 800px;
+
+  &__slogan-holder {
+    position: absolute;
+    left: -40px;
+    bottom: 140px;
+    transform: rotateZ(90deg);
+  }
+
+  &__slogan {
+    text-transform: uppercase;
+    color: $white;
+    font-weight: 300;
+    font-size: 24px;
+    letter-spacing: 6.7px;
+  }
+}

@@ -1,0 +1,155 @@
+@import '../../styles/variables';
+@import "../../styles/mixins";
+
+.intro {
+  position: relative;
+  background-image: url('../../images/intro/background.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+
+  &__content {
+    text-align: right;
+  }
+
+  &__title {
+    text-transform: uppercase;
+    color: $greywhite;
+    font-weight: 400;
+    font-size: 55px;
+    letter-spacing: 15.4px;
+    line-height: 135%;
+    margin-bottom: 40px;
+
+    @include respond-to('mobile') {
+      font-size: 35px;
+      letter-spacing: 10px;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__subtitle {
+    color: $greywhite;
+    font-weight: 300;
+    font-size: 24px;
+    letter-spacing: 6.7px;
+    margin-bottom: 55px;
+
+    @include respond-to('mobile') {
+      font-size: 20px;
+      letter-spacing: 5px;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__button {
+    max-width: 270px;
+    width: 100%;
+    background-color: transparent;
+    border: 1px solid $greywhite;
+    padding: 20px 15px;
+    text-transform: uppercase;
+    color: $white;
+    font-weight: 400;
+    font-size: 20px;
+    margin-bottom: 30px;
+    cursor: pointer;
+
+    @include respond-to('mobile') {
+      max-width: 200px;
+      padding: 15px 15px;
+      font-size: 16px;
+    }
+
+    &::after {
+      content: '';
+      display: inline-block;
+      background-color: $greywhite;
+      width: 45px;
+      height: 2px;
+      margin: 0 0 7px 20px;
+    }
+
+    &:hover {
+      border-color: $darkgrey;
+      transition: border-color ease 0.2s;
+    }
+  }
+
+  &__link {
+    display: block;
+    color: $greywhite;
+    font-weight: 300;
+    font-size: 18px;
+    letter-spacing: 5px;
+
+    &:hover {
+      color: $darkgrey;
+      transition: color ease 0.2s;
+    }
+
+    @include respond-to('mobile') {
+      font-size: 16px;
+      letter-spacing: 3px;
+    }
+  }
+
+  &__link-icon {
+    margin-left: 25px;
+    font-size: 12px;
+  }
+
+  &__scroll-link {
+    position: absolute;
+    bottom: 60px;
+    left: 50%;
+    transform: translate(0, 0);
+    font-size: 18px;
+    color: $greywhite;
+
+    &:hover {
+      color: crimson;
+      transition: color ease 0.2s;
+    }
+
+    @include respond-to('mobile') {
+      left: 45%;
+    }
+  }
+
+  &__slogan-holder {
+    position: absolute;
+    left: -100px;
+    bottom: 152px;
+    transform: rotateZ(270deg);
+
+    @include respond-to('mobile') {
+      left: -120px;
+      bottom: 125px;
+    }
+  }
+
+  &__slogan {
+    text-transform: uppercase;
+    color: $white;
+    font-weight: 400;
+    font-size: 26px;
+    letter-spacing: 2px;
+
+    @include respond-to('mobile') {
+      font-size: 20px;
+      letter-spacing: 1px;
+    }
+
+    &::before {
+      content: '';
+      display: inline-block;
+      background-color: $white;
+      width: 100px;
+      height: 2px;
+      margin: 0 12px 10px 0;
+    }
+  }
+}
